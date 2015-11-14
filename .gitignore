@@ -12,6 +12,9 @@
 vignettes/*.html
 vignettes/*.pdf
 
+# emacs backup
+*~
+
 # data
 dat
 raw
