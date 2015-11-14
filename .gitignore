@@ -16,3 +16,6 @@ vignettes/*.pdf
 dat
 raw
 wgs
+bin
+release
+out
