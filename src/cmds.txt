@@ -1,3 +1,0 @@
-plink --bfile rv1 --out rv1 --recodeA
-plink --bfile rv1 --out rv1 --freq
-tail -n +2 rv1.raw | cut -f7- -d ' ' |less	# extract gnotype matrix from plink.raw file

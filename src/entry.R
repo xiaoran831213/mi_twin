@@ -2,15 +2,15 @@ source("src/helper.R")
 source("src/analysis.R")
 
 ## data file root name.
-rut<-"dat/rv1";
-##sex<-2L;
+rut <- "p1.0";
+sex <- NULL;
 
 ## read subject phenotypes
 if(!exists('phe', inherits = F))
 {
-    phe<-paste(rut, 'phe', sep='.');
+    phe<-paste('dat', rut, 'phe.txt', sep='/');
     phe<-read.table(file = phe, header = T, as.is = T)
-    #phe<-phe[phe$ethnicity==6L, ]; # only take sample of european origin
+    phe<-phe[phe$ethnicity==6L, ]; # only take sample of european origin
     if(!is.null(sex))
     {
         phe<-phe[phe$gender==sex, ]; # only task sample of one gender
@@ -20,7 +20,7 @@ if(!exists('phe', inherits = F))
 ## read genotype and meta data
 if(!exists('gmx', inherits = F))
 {
-    bin<-paste(rut, 'gno', 'bin', sep='.');
+    bin<-paste('bin', rut, 'gno.bin', sep='/');
     if(file.exists(bin))
     {
         load(file = bin);
